@@ -1,0 +1,41 @@
+[[freebsd]]
+=== Install {kib} on FreeBSD
+++++
+<titleabbrev>Install on FreeBSD</titleabbrev>
+++++
+
+[source,sh]
+-------------------------
+pkg install textproc/kibana7
+-------------------------
+
+[[brew-layout]]
+==== Directory layout for Homebrew installs
+
+When you install {kib} with `brew install` some important locations are:
+
+[cols="<h,<,<m,<m",options="header",]
+|=======================================================================
+| Type | Description | Default Location | Setting
+| home
+  | Kibana home directory or `$KIBANA_HOME`
+  | /usr/local/www/kibana7
+ d|
+
+| bin
+  | Binary scripts including `kibana` to start a node
+    and `kibana-plugin` to install plugins
+  | /usr/local/var/homebrew/linked/kibana-full/bin
+ d|
+
+| conf
+  | Configuration files including `kibana.yml`
+  | /usr/local/etc/kibana
+ d|
+
+| logs
+  | Log files location.
+  | /var/log
+  | path.logs
+
+|=======================================================================
